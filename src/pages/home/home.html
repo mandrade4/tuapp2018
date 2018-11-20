@@ -1,0 +1,28 @@
+<ion-header no-border>
+  <ion-navbar color="skyblue">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Lugares</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="card-background-page">
+
+  <ion-content class="card-background-page">
+    <div *ngFor="let item of places" [navPush]="profilePage" [navParams]="{ producto : item }">
+      <ion-card>
+        <img src="{{item.image}}" />
+        <div class="card-title">{{item.name}}</div>
+      </ion-card>
+    </div>
+  </ion-content>
+
+
+  <ion-infinite-scroll (ionInfinite)="siguiente_pagina($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+
+</ion-content>

@@ -1,0 +1,55 @@
+<ion-header>
+
+    <ion-navbar color="skyblue">
+      <!-- <ion-title color="light">{{producto.categoria.nombre}}</ion-title> -->
+      <!-- <ion-buttons end>
+        <button (click)="comoLlegar()">
+          <ion-icon name="navigate" color="danger"></ion-icon>
+        </button>
+      </ion-buttons> -->
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content fullscreen class="profile">
+  
+    <div class="box-wrapper">
+      <img src="{{producto.image}}" alt="rhcp" />
+  
+  
+  
+      <div class="box-content">
+        <a class="buy">
+          <span>
+            <ion-icon>
+              <img src="https://image.flaticon.com/user_icons/8160/8160503/1531462084.svg" height="55" width="42" id="papu" (click)="fP.agregar_favorito(producto)">
+            </ion-icon>
+          </span>
+        </a>
+        <br>
+        <div class="title">{{producto.name}}</div>
+        <!-- <div class="categoria">{{producto.categoria.nombre}}</div> -->
+        <br>
+        <div class="desc">{{producto.description}}</div>
+        <span class="price">{{producto.phone}}</span>
+        <span class="price">{{producto.website}}</span>
+        <!-- <span class="price">{{producto.direccion}}</span> -->
+        <br>  
+        <div class="footer"></div>
+      </div>
+      </div>
+  <!-- <div>
+    MEJORAR VISTAS DE FAVORITOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOS
+  </div> -->
+  
+    <ion-fab right bottom class="comollegar" (click)=comoLlegar()>
+      <button ion-fab color="dark">
+        <ion-icon>
+          <img src="../../../assets/icon/navigation.png">
+        </ion-icon>
+      </button>
+    </ion-fab>
+  
+  
+  </ion-content>
