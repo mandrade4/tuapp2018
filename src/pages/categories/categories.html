@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar color="skyblue">
+    <ion-buttons left>
+      <button ion-button icon-only>
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Busqueda por Categorias</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <!-- <ion-list>
+
+    <button ion-item *ngFor="let categoria of ps.lineas" [navPush]="porCategorias" [navParams]="{ categoria : categoria }">
+      <ion-icon [name]="categoria.icono" item-left></ion-icon>
+      {{ categoria.linea }}
+    </button>
+
+  </ion-list> -->
+  <ion-grid> 
+    <ion-row>
+      <ion-col col-4 *ngFor="let categoria of categories" text-center>
+        <button ion-item  [navPush]="porCategorias" [navParams]="{ categoria : categoria }" >
+          <ion-icon > <img src="{{categoria.icon}}"  width="60" alt="Categorias" ></ion-icon>
+        </button> 
+        {{ categoria.name }}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
